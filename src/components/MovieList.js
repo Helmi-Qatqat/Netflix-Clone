@@ -16,6 +16,7 @@ export default function MovieList(props) {
     fetch("https://movies-library-tyy6.onrender.com/trending")
     .then((data)=> data.json())
     .then((data) => {
+      console.log(data)
       setTrendingMovies(data)
       setIsLoading(false)
     })

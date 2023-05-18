@@ -9,19 +9,17 @@
 
 .movie-card {
   display: flex;
-  flex-basis: 20%;
-  flex-grow: 1;
-  flex-shrink: 1;
   flex-flow: column;
+  flex-basis: 23%;
   padding: 20px;
   gap: 20px;
   align-items: center;
   color: white;
   position: relative;
-  margin: 0 auto;
   transition: 0.3s;
   height: 500px;
   text-align: center;
+  min-width: 300px;
 }
 
 .movie-card:hover {
@@ -30,11 +28,17 @@
 }
 
 .movie-card:hover > img {
-  transform: scale(1.25);
+  transform: scale(2);
 }
 
 .movie-card img {
   transition: 0.3s;
+  margin-top: 35px;
+  width: 50px;
+}
+
+.movie-card:hover > .movie-card-background-image {
+  filter: blur(3px) grayscale(100%);
 }
 
 .movie-card-background-image {
@@ -46,26 +50,36 @@
   top: 0px;
   width: 100%;
   height: 100%;
-  filter: blur(1px);
+  filter: blur(2px) grayscale(0%); 
+  transition: 0.3s;
 }
 
+
+.movie-card:hover > h3 {
+  transform: translateY(30px);
+}
 .movie-card h3{
-  font-size: 0.8em;
+  font-size: 1em;
+  transition: 0.3s;
 }
 
-.movie-card button {
+.buttons-container {
   margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-container button {
   padding: 10px 10px;
   font-size: 12px;
-  background-color: rgb(11, 122, 178);
   border: 0px;
   color: white;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 600;
-  border-radius: 5px;;
+  border-radius: 5px;
 }
 
-.movie-card button:hover {
+.buttons-container button:hover {
   cursor: pointer;
   background-color: rgb(8, 72, 104);
 }

@@ -1,8 +1,7 @@
 .movies-secondary-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
-  margin: 0 auto;
-  justify-content: center;
 }
