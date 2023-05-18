@@ -30,7 +30,10 @@ export default function Movie(props) {
         <div className="movie-card-background-image" style={divStyle}></div>
         <img src={`https://image.tmdb.org/t/p/w500${movieData.poster_path}`} alt={`${movieData.title}`}></img>
         <h3>{movieData.title}</h3>
-        <p>{movieData.comment}</p>
+        <div className="comment-container">
+          <p>Comment:</p>
+          <p>{movieData.comment}</p>
+        </div>
         <div className="buttons-container">
           {!props.showFavButton && <Button onClick={addFavoriteHandler} variant="primary">Add to favorites</Button>}
           {props.showFavButton && <Button variant="success" onClick={updateFavoriteHandler}>Update</Button>}
