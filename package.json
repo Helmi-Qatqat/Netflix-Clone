@@ -2,7 +2,7 @@
   "name": "netflix-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Helmi-Qatqat.Netflix-Clone.github.io/",
+  "homepage": "https://Helmi-Qatqat.github.io/Netflix-Clone",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
