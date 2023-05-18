@@ -3,6 +3,7 @@ import axios from "axios"
 import Movie from "./Movie"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './Favlist.css'
 import './ModalMovie.css';
 
 export default function Favlist() {
@@ -64,7 +65,7 @@ export default function Favlist() {
           </form>
         </Modal.Footer>
       </Modal>
-    <div className="movies-secondary-container">
+    <div className="fav-list-container">
       {!isFetched && <div>Loading . . .</div>}
       {isFetched && favMovies.map((e) => (
         <Movie data={e} setClickedMovie={setClickedMovie} showFavButton={showFavButton} key={e.id} handleShow={handleShow} handleClose={handleClose}/>
